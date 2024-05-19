@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlnsL:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Document</title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+    <ul>
+        <!-- <li th:text="${name}"></li>
+        <li th:text="${lastname}"></li> -->
+        <li th:text="${user.name}"></li>
+        <!-- tu pones el nombre de la variable por que esta porqueria ya agrega el getName por si solo -->
+        <!-- tu solo agrega el nombre de la variable  -->
+        <li th:text="${user.lastname}"></li>
+        <!-- <li th:if="${user.email == null}" th:text="${user.email}"></li> -->
+
+    </ul>
+<a th:href="@{/list}">ver listado</a>
+<a th:href="@{/api/var/values}">ver listado</a>
+<a th:href="@{/api/var/params/foo?message=hola mundo}">ver mensaje</a>
+<a th:href="@{/api/var/params/foo(message='hola mundo')}">ver mensaje2</a>
+<a th:href="@{/api/var/baz/mensajerandom}">ver mensaje3</a>
+<!-- <a th:href="@{/api/var/baz/message}">ver mensaje</a> -->
+
+</body>
+</html>
